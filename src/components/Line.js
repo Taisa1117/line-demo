@@ -15,7 +15,7 @@ function Line() {
 
   useEffect(() => {
     db.collection("messages")
-      .orderBy("createdAt")
+      .orderBy("sendTime")
       .onSnapshot((snapshot) => {
         setMessages(snapshot.docs.map((doc) => doc.data()));
       });

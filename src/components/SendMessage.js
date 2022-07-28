@@ -14,7 +14,7 @@ export const SendMessage = () => {
     const { uid, photoURL } = auth.currentUser;
     //データを格納
     db.collection("messages").add({
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      sendTime: firebase.firestore.FieldValue.serverTimestamp(),
       text: message,
       photoURL,
       uid,
