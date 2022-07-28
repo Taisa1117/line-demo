@@ -39,7 +39,9 @@ export const SendMessage = () => {
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
-          <SendIcon />
+          <button onClick={sendMessage} type="button">
+            <SendIcon />
+          </button>
         </div>
       </form>
     </div>
